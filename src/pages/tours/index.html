@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.0/nouislider.min.css" />
+  <link href="/common.css" rel="stylesheet" />
+  <link href="style.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/fonts/fonts.css" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../../static/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../..static/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../static/images/favicon-16x16.png">
+  <title>Каталог туров</title>
+</head>
+
+<body>
+  @@include('header/index.html', {
+  "link" : "/",
+  "classes" : "header_white"
+  })
+  <main>
+    @@include('blocks/headerPageBlock/index.html', {
+    "title" : "Каталог туров"
+    })
+    <form class="tours container">
+      <button class="mobile-filters" type="button">Фильтры</button>
+      <div class="tours__tabs">
+        <input type="radio" name="tab" id="tab1" checked> <label class="tours__tab" for="tab1"><span>Все</span></label>
+        <input type="radio" name="tab" id="tab2"> <label class="tours__tab" for="tab2"><span>Перезагрузиться</span></label>
+        <input type="radio" name="tab" id="tab3"> <label class="tours__tab" for="tab3"><span>Преодолеть себя</span></label>
+        <input type="radio" name="tab" id="tab4"> <label class="tours__tab" for="tab4"><span>Красивые места</span></label>
+        <input type="radio" name="tab" id="tab5"> <label class="tours__tab" for="tab5"><span>Хочу экстрим</span></label>
+        <input type="radio" name="tab" id="tab6"> <label class="tours__tab" for="tab6"><span>Релакс и оздоровление</span></label>
+        <input type="radio" name="tab" id="tab7"> <label class="tours__tab" for="tab7"><span>Вкусный тур</span></label>
+      </div>
+      <div class="tours__content">
+        <div class="tours__filters filters">
+          <button type="button" class="filters__close"></button>
+          <div class="filters__fieldset">
+            <p class="filters__legend">Стоимость</p>
+            <div class="range-1"></div>
+          </div>
+          <div class="filters__fieldset">
+            <p class="filters__legend">Продолжительность</p>
+            <div class="range-2"></div>
+          </div>
+          <div class="filters__fieldset">
+            <p class="filters__legend">Количество человек</p>
+            <div class="filters__amount">
+              <button class="filters__minus" type="button"></button>
+              <span class="filters__amount-value">5</span>
+              <button class="filters__plus" type="button"></button>
+            </div>
+          </div>
+          <div class="filters__fieldset">
+            <p class="filters__legend">Сложность тура</p>
+            <div>
+              <input type="radio" name="level" id="level1" checked> <label for="level1">Легкий</label>
+              <input type="radio" name="level" id="level2"> <label for="level2">Нормальный</label>
+              <input type="radio" name="level" id="level3"> <label for="level3">Сложный</label>
+              <input type="radio" name="level" id="level4"> <label for="level4">Чертово пекло</label>
+            </div>
+          </div>
+          <div class="filters__fieldset">
+            <p class="filters__legend">Питание</p>
+            <div>
+              <input type="radio" name="food" id="food1" checked> <label for="food1">Кафе</label>
+              <input type="radio" name="food" id="food2"> <label for="food2">Ресторан</label>
+              <input type="radio" name="food" id="food3"> <label for="food3">С дома яички возьму</label>
+            </div>
+          </div>
+          <div class="filters__fieldset">
+            <p class="filters__legend">Размещение</p>
+            <input type="radio" name="accommodation" id="accommodation1" checked> <label
+              for="accommodation1">Палатка</label>
+            <input type="radio" name="accommodation" id="accommodation2"> <label for="accommodation2">Отель</label>
+            <input type="radio" name="accommodation" id="accommodation3"> <label for="accommodation3">Домик</label>
+            <input type="radio" name="accommodation" id="accommodation4"> <label for="accommodation4">Хочу на камнях
+              спать</label>
+          </div>
+        </div>
+        <ul class="tours__list">
+          @@include('tourCard/index.html', {
+          "imgURL" : "/static/images/tour-1.jpg",
+          "days": "7 дней",
+          "data": "20.10.2022",
+          "title": "Горные приключения",
+          "text": "Отдых с прогулками вдоль высокогорных заповедных озер, а также на водопад Куйгук."
+          })
+          @@include('tourCard/index.html', {
+          "imgURL" : "/static/images/tour-2.jpg",
+          "days": "7 дней",
+          "data": "20.10.2022",
+          "title": "знакомство с алтаем",
+          "text": "Отдых с прогулками вдоль высокогорных заповедных озер, а также на водопад Куйгук."
+          })
+          @@include('tourCard/index.html', {
+          "imgURL" : "/static/images/tour-3.jpg",
+          "days": "7 дней",
+          "data": "20.10.2022",
+          "title": "авторский треккинг тур",
+          "text": "Отдых с прогулками вдоль высокогорных заповедных озер, а также на водопад Куйгук."
+          })
+          @@include('tourCard/index.html', {
+          "imgURL" : "/static/images/poster.jpg",
+          "days": "7 дней",
+          "data": "20.10.2022",
+          "title": "ТАЙНЫ МУЛЬТИНСКИХ ОЗЕР",
+          "text": "Отдых с прогулками вдоль высокогорных заповедных озер, а также на водопад Куйгук."
+          })
+          @@include('tourCard/index.html', {
+          "imgURL" : "/static/images/tour-2.jpg",
+          "days": "7 дней",
+          "data": "20.10.2022",
+          "title": "знакомство с алтаем",
+          "text": "Отдых с прогулками вдоль высокогорных заповедных озер, а также на водопад Куйгук."
+          })
+          @@include('tourCard/index.html', {
+          "imgURL" : "/static/images/tour-3.jpg",
+          "days": "7 дней",
+          "data": "20.10.2022",
+          "title": "авторский треккинг тур",
+          "text": "Отдых с прогулками вдоль высокогорных заповедных озер, а также на водопад Куйгук."
+          })
+          @@include('tourCard/index.html', {
+          "imgURL" : "/static/images/poster.jpg",
+          "days": "7 дней",
+          "data": "20.10.2022",
+          "title": "ТАЙНЫ МУЛЬТИНСКИХ ОЗЕР",
+          "text": "Отдых с прогулками вдоль высокогорных заповедных озер, а также на водопад Куйгук."
+          })
+          @@include('tourCard/index.html', {
+          "imgURL" : "/static/images/tour-1.jpg",
+          "days": "7 дней",
+          "data": "20.10.2022",
+          "title": "Горные приключения",
+          "text": "Отдых с прогулками вдоль высокогорных заповедных озер, а также на водопад Куйгук."
+          })
+          @@include('tourCard/index.html', {
+          "imgURL" : "/static/images/tour-3.jpg",
+          "days": "7 дней",
+          "data": "20.10.2022",
+          "title": "авторский треккинг тур",
+          "text": "Отдых с прогулками вдоль высокогорных заповедных озер, а также на водопад Куйгук."
+          })
+          @@include('tourCard/index.html', {
+          "imgURL" : "/static/images/poster.jpg",
+          "days": "7 дней",
+          "data": "20.10.2022",
+          "title": "ТАЙНЫ МУЛЬТИНСКИХ ОЗЕР",
+          "text": "Отдых с прогулками вдоль высокогорных заповедных озер, а также на водопад Куйгук."
+          })
+        </ul>
+      </div>
+    </form>
+  </main>
+  @@include('footer/index.html', {
+  "link" : "/"
+  })
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wnumb/1.2.0/wNumb.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.0/nouislider.min.js"></script>
+  <script src="index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+.favorite {
+    position: relative;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background-color: #fff;
+    transition: transform 0.4s;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 50%;
+      height: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-image: url("/static/images/favorite.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    &_active {
+      background: linear-gradient(180deg, #00ABEB 0%, #C55DA4 100%);
+
+      &::before {
+        background-image: url("/static/images/favorite-white.svg");
+      }
+    }
+
+    &_small {
+        width: 30px;
+        height: 30px;
+    }
+  }

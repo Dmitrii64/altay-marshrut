@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+  <link href="/common.css" rel="stylesheet" />
+  <link href="style.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/fonts/fonts.css" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../../static/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../..static/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../static/images/favicon-16x16.png">
+  <title>Контакты</title>
+</head>
+
+<body>
+  @@include('header/index.html', {
+  "link" : "/",
+  "classes" : "header_white"
+  })
+  <main>
+    @@include('blocks/headerPageBlock/index.html', {
+    "title" : "Контакты"
+    })
+    <section class="contacts container">
+      <div class="contacts__wrapper">
+        <ul class="contacts__list">
+          <li class="contacts__item contacts__item_tel">
+            <a href="tel:88002007341">88002007341</a>
+          </li>
+          <li class="contacts__item contacts__item_wapp">
+            <a href="tel:+79635376207">+79635376207</a>
+          </li>
+          <li class="contacts__item contacts__item_mail">
+            <a href="mailto:info@altay-marshrut.ru">info@altay-marshrut.ru</a>
+          </li>
+        </ul>
+        <div class="contacts__address">
+          <p>Адрес</p>
+          <p class="contacts__address-text">656056, г. Барнаул, проспект Социалистический, д.109, оф. 212</p>
+        </div>
+        <div class="contacts__socials">
+          <p>Мы в социальных сетях</p>
+          <ul class="contacts__links">
+            <li class="contact__link">
+              <a href="https://instagram.com/">
+                <div class="icon icon_instagram-black"></div>
+              </a>
+            </li>
+            <li class="contact__link">
+              <a href="https://vk.com/">
+                <div class="icon icon_vk-black"></div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <div class="container map"><a
+        href="https://yandex.ru/maps/org/altay_marshrut/144450302352/?utm_medium=mapframe&utm_source=maps"
+        style="color:#eee;font-size:12px;position:absolute;top:0px;">Алтай маршрут</a><a
+        href="https://yandex.ru/maps/197/barnaul/category/tour_operator/184106430/?utm_medium=mapframe&utm_source=maps"
+        style="color:#eee;font-size:12px;position:absolute;top:14px;">Туроператор в Барнауле</a><a
+        href="https://yandex.ru/maps/197/barnaul/category/excursions/184106434/?utm_medium=mapframe&utm_source=maps"
+        style="color:#eee;font-size:12px;position:absolute;top:28px;">Экскурсии в Барнауле</a><iframe
+        class="map__iframe"
+        src="https://yandex.ru/map-widget/v1/?from=mapframe&ll=83.768026%2C53.348021&mode=search&oid=144450302352&ol=biz&z=17"
+        width="1200" height="480" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+    @@include('blocks/contactBlock/index.html')
+  </main>
+  @@include('footer/index.html', {
+  "link" : "/"
+  })
+</body>
+
+</html>

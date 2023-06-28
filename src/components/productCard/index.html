@@ -1,0 +1,15 @@
+<li class="product-card @@classes">
+  <a href="/pages/product">
+    <div class="product-card__img-wrapper">
+      <img src="@@imgURL" alt="product" class="image" width="296" height="351">
+      @@include('ui/favoriteIcon/index.html', {
+      "classes" : ""
+      })
+    </div>
+    <div class="product-card__info">
+      <h3 class="product-card__title">@@title</h3>
+      <p class="product-card__amount">@@amount</p>
+      <button class="button button_grd product-card__button"><span class="button-txt">Добавить в корзину</span></button>
+    </div>
+  </a>
+</li>

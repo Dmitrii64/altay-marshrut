@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <link href="/common.css" rel="stylesheet" />
+  <link href="style.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/fonts/fonts.css" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../../static/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../..static/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../static/images/favicon-16x16.png">
+  <title>Горячие предложения</title>
+</head>
+
+<body>
+  @@include('header/index.html', {
+  "link" : "/",
+  "classes" : "header_white"
+  })
+  <main>
+    @@include('blocks/headerPageBlock/index.html', {
+    "title" : "Горячие предложения"
+    })
+    @@include('blocks/cashbackBlock/index.html')
+    <section class="cashback container">
+      <div class="cashback__wrapper">
+        <h2 class="cashback__title title-h2">кэшбэк</h2>
+        <p class="cashback__description">Lorem ipsum dolor sit amet consectetur. Enim lectus magnis non condimentum
+          massa. Ut arcu nunc velit
+          ut suspendisse sed. Pharetra neque ornare purus sit in quis in. Massa ante platea neque convallis eget
+          pharetra varius suspendisse nunc. Urna mi eu elit hac velit tortor nisi pellentesque. Orci id cursus suscipit
+          ornare ridiculus neque a aliquet morbi. Placerat arcu sem vel purus consectetur orci sagittis malesuada
+          turpis. Accumsan aenean interdum ut lacus ipsum.
+          Pulvinar est tempor mi suspendisse diam integer in at ullamcorper. Dolor ut ultricies et donec at lacus
+          aliquet amet adipiscing. Semper risus mi convallis risus. Pharetra sem urna congue vel nunc sed orci.</p>
+      </div>
+      <div class="cashback__banner">
+        <img src="/static/images/cashback.jpg" alt="cashback" class="image">
+        <p class="cashback__banner-text">А что бы узнать подробнее жми на баннер</p>
+      </div>
+    </section>
+    <section class="program container">
+      <div class="program__wrapper">
+        <h2 class="program__title title-h2">программа лояльности</h2>
+        <p class="program__description">Lorem ipsum dolor sit amet consectetur. Enim lectus magnis non condimentum
+          massa. Ut arcu nunc velit ut suspendisse sed. Pharetra neque ornare purus sit in quis in. Massa ante platea
+          neque convallis eget pharetra varius suspendisse nunc. Urna mi eu elit hac velit tortor nisi pellentesque.
+          Orci id cursus suscipit ornare ridiculus neque a aliquet morbi. Placerat arcu sem vel purus consectetur orci
+          sagittis malesuada turpis. Accumsan aenean interdum ut lacus ipsum.
+          Pulvinar est tempor mi suspendisse diam integer in at ullamcorper. Dolor ut ultricies et donec at lacus
+          aliquet amet adipiscing. Semper risus mi convallis risus. Pharetra sem urna congue vel nunc sed orci.</p>
+      </div>
+      @@include('ui/accordion/index.html', {
+      "classes" : "program__faq"
+      })
+    </section>
+  </main>
+  @@include('footer/index.html', {
+  "link" : "/"
+  })
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

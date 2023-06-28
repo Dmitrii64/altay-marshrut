@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+  <link href="/common.css" rel="stylesheet" />
+  <link href="style.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/fonts/fonts.css" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../../static/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../..static/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../static/images/favicon-16x16.png">
+  <title>Личный кабинет</title>
+</head>
+
+<body>
+  @@include('header/index.html', {
+  "link" : "/",
+  "classes" : "header_white"
+  })
+  <main>
+    @@include('blocks/headerPageBlock/index.html', {
+    "title" : "Личный кабинет"
+    })
+    <div class="webpage__type container">
+      <select class="webpage__type-select">
+        <option>Личные данные</option>
+        <option>Мои туры</option>
+        <option>Документы</option>
+        <option>Мои товары</option>
+        <option>Бонусы</option>
+        <option>Задать вопрос менеджеру</option>
+      </select>
+    </div>
+    <section class="lk-container container">
+      <ul class="webpage-navigation">
+        <li class="webpage-navigation__item webpage-navigation__item_active" data-category="info">Личные данные</li>
+        <li class="webpage-navigation__item" data-category="tours">Мои туры</li>
+        <li class="webpage-navigation__item" data-category="documents">Документы</li>
+        <li class="webpage-navigation__item" data-category="products">Мои товары</li>
+        <li class="webpage-navigation__item" data-category="bonus">Бонусы</li>
+        <li class="webpage-navigation__item" data-category="question">Задать вопрос менеджеру</li>
+      </ul>
+      <div class="lk-content">
+        <div class="info content-js" data-category="info">
+          <ul class="info__list">
+            <li class="info__item">
+              <p class="info__title info__title_fio">ФИО</p>
+              <p class="info__text">Иванов иван иванович</p>
+            </li>
+            <li class="info__item">
+              <p class="info__title info__title_tel">Телефон</p>
+              <p class="info__text">+ 7 232 565 25 89</p>
+            </li>
+            <li class="info__item">
+              <p class="info__title info__title_mail">Почта</p>
+              <p class="info__text">ivanov@mail.ru</p>
+            </li>
+          </ul>
+          <button class="button button_grd" type="button"><span class="button-txt">Изменить данные</span></button>
+        </div>
+        <div class="my-tours content-js hidden" data-category="tours">
+          <ul class="my-tours__categories">
+            <li class="my-tours__category my-tours__category_active">Предстоящие</li>
+            <li class="my-tours__category">Зарезервированные</li>
+            <li class="my-tours__category">Избранное</li>
+            <li class="my-tours__category">Завершенные</li>
+          </ul>
+          <ul class="my-tours__list">
+            <!-- предстоящие -->
+            <li class="tour-card">
+              <a href="#">
+                <div class="tour-card__img-wrapper">
+                  <img src="/static/images/tour-1.jpg" alt="tour-1" class="tour-card__img" width="400" height="220">
+                  <div class="tour-card__time">
+                    <span>7 дней</span>
+                    <span>20.10.2022</span>
+                  </div>
+                  @@include('ui/favoriteIcon/index.html', {
+                  "classes" : ""
+                  })
+                </div>
+                <div class="tour-card__info">
+                  <h3 class="tour-card__info-title">Горные приключения</h3>
+                  <ul class="tour-card__hashtags">
+                    <li class="tour-card__hashtag"># преодолеть себя</li>
+                    <li class="tour-card__hashtag"># хочу экстрим</li>
+                  </ul>
+                  <p class="tour-card__text">Отдых с прогулками вдоль высокогорных заповедных озер, а также на водопад
+                    Куйгук.</p>
+                </div>
+                <div class="tour-card__buttons">
+                  <button class="button button_grd"><span class="button-txt">Задать вопрос</span></button>
+                  <button class="tour-card__description">Описание тура</button>
+                </div>
+              </a>
+            </li>
+            <!-- Зарезервированные -->
+            <li class="tour-card">
+              <a href="#">
+                <div class="tour-card__img-wrapper">
+                  <img src="/static/images/tour-2.jpg" alt="tour-1" class="tour-card__img" width="400" height="220">
+                  <div class="tour-card__time">
+                    <span>7 дней</span>
+                    <span>20.10.2022</span>
+                  </div>
+                  @@include('ui/favoriteIcon/index.html', {
+                  "classes" : ""
+                  })
+                </div>
+                <div class="tour-card__info">
+                  <h3 class="tour-card__info-title">Горные приключения</h3>
+                  <ul class="tour-card__hashtags">
+                    <li class="tour-card__hashtag"># преодолеть себя</li>
+                    <li class="tour-card__hashtag"># хочу экстрим</li>
+                  </ul>
+                  <p class="tour-card__text">Отдых с прогулками вдоль высокогорных заповедных озер, а также на водопад
+                    Куйгук.</p>
+                </div>
+                <div class="tour-card__addBlock">
+                  <p class="tour-card__addBlock-text">До окончания бронирования осталось</p>
+                  <p class="tour-card__addBlock-text tour-card__addBlock-text_bold">1 день : 12 часов : 30 мин</p>
+                </div>
+                <div class="tour-card__buttons">
+                  <button class="button button_grd"><span class="button-txt">Оплатить</span></button>
+                  <button class="tour-card__description">Описание тура</button>
+                </div>
+              </a>
+            </li>
+            <!-- Избранное -->
+            @@include('tourCard/index.html', {
+            "imgURL" : "/static/images/tour-3.jpg",
+            "days": "7 дней",
+            "data": "20.10.2022",
+            "title": "Горные приключения",
+            "text": "Отдых с прогулками вдоль высокогорных заповедных озер, а также на водопад Куйгук.",
+            "favoriteClass": "favorite_active"
+            })
+            <!-- Завершенные -->
+            <li class="tour-card">
+              <a href="#">
+                <div class="tour-card__img-wrapper">
+                  <img src="/static/images/tour-4.jpg" alt="tour-1" class="tour-card__img" width="400" height="220">
+                  <div class="tour-card__time">
+                    <span>7 дней</span>
+                    <span>20.10.2022</span>
+                  </div>
+                  @@include('ui/favoriteIcon/index.html', {
+                  "classes" : "favorite_active"
+                  })
+                </div>
+                <div class="tour-card__info">
+                  <h3 class="tour-card__info-title">Горные приключения</h3>
+                  <ul class="tour-card__hashtags">
+                    <li class="tour-card__hashtag"># преодолеть себя</li>
+                    <li class="tour-card__hashtag"># хочу экстрим</li>
+                  </ul>
+                  <p class="tour-card__text">Отдых с прогулками вдоль высокогорных заповедных озер, а также на водопад
+                    Куйгук.</p>
+                </div>
+                <div class="tour-card__addBlock">
+                  <p class="tour-card__addBlock-text tour-card__addBlock-text_semibold">Оставьте отзыв и получите скидку
+                    на следующий тур</p>
+                </div>
+                <div class="tour-card__buttons">
+                  <button class="button button_grd"><span class="button-txt">Оставить отзыв</span></button>
+                  <button class="tour-card__description">Описание тура</button>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <ul class="documents content-js hidden" data-category="documents">
+          <li class="documents__item">
+            <img class="documents__img" src="/static/images/document.jpg" alt="document">
+            <p class="documents__title">Договора на оказание услуг</p>
+          </li>
+          <li class="documents__item">
+            <img class="documents__img" src="/static/images/document.jpg" alt="document">
+            <p class="documents__title">Страховка</p>
+          </li>
+        </ul>
+        <div class="my-products content-js hidden" data-category="products">
+          <ul class="my-products__categories">
+            <li class="my-products__category">Избранное</li>
+            <li class="my-products__category my-products__category_active">Мои заказы</li>
+          </ul>
+          <!-- Мои заказы -->
+          <ul class="my-products__orders">
+            @@include('order/index.html', {
+            "imgURL" : "/static/images/product-1.jpg",
+            "title" : "Рюкзак походный, большой, синий",
+            "price" : "3 000 руб.",
+            "amount": "2 шт.",
+            "date": "12.03.2022",
+            "status": "Оплачен",
+            "color": "green"
+            })
+            @@include('order/index.html', {
+            "imgURL" : "/static/images/product-2.jpg",
+            "title" : "Рюкзак походный, большой, синий",
+            "price" : "3 000 руб.",
+            "amount": "2 шт.",
+            "date": "12.03.2022",
+            "status": "В дороге",
+            "color": "brown"
+            })
+            @@include('order/index.html', {
+            "imgURL" : "/static/images/product-1.jpg",
+            "title" : "Рюкзак походный, большой, синий",
+            "price" : "3 000 руб.",
+            "amount": "2 шт.",
+            "date": "12.03.2022",
+            "status": "Доставлен",
+            "color": "blue"
+            })
+            @@include('order/index.html', {
+            "imgURL" : "/static/images/product-1.jpg",
+            "title" : "Рюкзак походный, большой, синий",
+            "price" : "3 000 руб.",
+            "amount": "2 шт.",
+            "date": "12.03.2022",
+            "status": "Доставлен",
+            "color": "blue"
+            })
+            @@include('order/index.html', {
+            "imgURL" : "/static/images/product-1.jpg",
+            "title" : "Рюкзак походный, большой, синий",
+            "price" : "3 000 руб.",
+            "amount": "2 шт.",
+            "date": "12.03.2022",
+            "status": "Доставлен",
+            "color": "blue"
+            })
+          </ul>
+          <!-- Избранное  -->
+          <!-- <ul class="my-products__favorites">
+            @@include('productCard/index.html', {
+            "imgURL" : "/static/images/product-1.jpg",
+            "title" : "Рюкзак походный, большой, синий",
+            "amount": "3 000 руб.",
+            "classes": "my-products__item"
+            })
+            @@include('productCard/index.html', {
+            "imgURL" : "/static/images/product-2.jpg",
+            "title" : "Рюкзак походный, большой, синий",
+            "amount": "3 000 руб.",
+            "classes": "my-products__item"
+            })
+            @@include('productCard/index.html', {
+            "imgURL" : "/static/images/product-3.jpg",
+            "title" : "Рюкзак походный, большой, синий",
+            "amount": "3 000 руб.",
+            "classes": "my-products__item"
+            })
+            @@include('productCard/index.html', {
+            "imgURL" : "/static/images/product-4.jpg",
+            "title" : "Рюкзак походный, большой, синий",
+            "amount": "3 000 руб.",
+            "classes": "my-products__item"
+            })
+          </ul> -->
+        </div>
+        <div class="bonus content-js hidden" data-category="bonus">
+          <div class="bonus__header">
+            <div class="bonus__header-wrapper">
+              <p class="bonus__header-title">У вас</p>
+              <p class="bonus__header-amount">3 000 бонусов</p>
+            </div>
+            <div>
+              <p class="bonus__header-title">Достижения</p>
+              <p class="bonus__header-achive">Палаточных дел мастер</p>
+            </div>
+          </div>
+          <div class="bonus__history">
+            <p class="bonus__history-title">История зачислений</p>
+            <ul class="bonus__history-list">
+              <li class="bonus__history-item">
+                <p class="bonus__history-date">20.02.2023</p>
+                <p class="bonus__history-name">Авторский треккинг тур</p>
+                <p class="bonus__history-amount">+ 1000</p>
+              </li>
+              <li class="bonus__history-item">
+                <p class="bonus__history-date">20.02.2023</p>
+                <p class="bonus__history-name">Авторский треккинг тур</p>
+                <p class="bonus__history-amount">+ 1000</p>
+              </li>
+              <li class="bonus__history-item">
+                <p class="bonus__history-date">20.02.2023</p>
+                <p class="bonus__history-name">Авторский треккинг тур</p>
+                <p class="bonus__history-amount">+ 1000</p>
+              </li>
+              <li class="bonus__history-item">
+                <p class="bonus__history-date">20.02.2023</p>
+                <p class="bonus__history-name">Авторский треккинг тур</p>
+                <p class="bonus__history-amount">+ 1000</p>
+              </li>
+              <li class="bonus__history-item">
+                <p class="bonus__history-date">20.02.2023</p>
+                <p class="bonus__history-name">Авторский треккинг тур</p>
+                <p class="bonus__history-amount">+ 1000</p>
+              </li>
+            </ul>
+            <button class="bonus__history-add">Показать еще</button>
+          </div>
+          <div class="bonus__program">
+            <h2 class="title-h2 bonus__title">программа лояльности</h2>
+            <p class="bonus__program-text">Lorem ipsum dolor sit amet consectetur. Enim lectus magnis non condimentum
+              massa. Ut arcu nunc velit ut suspendisse sed. Pharetra neque ornare purus sit in quis in. Massa ante
+              platea neque convallis eget pharetra varius suspendisse nunc. Urna mi eu elit hac velit tortor nisi
+              pellentesque. Orci id cursus suscipit ornare ridiculus neque a aliquet morbi. Placerat arcu sem vel purus
+              consectetur orci sagittis malesuada turpis. Accumsan aenean interdum ut lacus ipsum.
+              Pulvinar est tempor mi suspendisse diam integer in at ullamcorper. Dolor ut ultricies et donec at lacus
+              aliquet amet adipiscing. Semper risus mi convallis risus. Pharetra sem urna congue vel nunc sed orci.</p>
+          </div>
+          <div class="bonus__faq">
+            <h2 class="title-h2 bonus__title">Часто задаваемые вопросы</h2>
+            @@include('ui/accordion/index.html', {
+            "classes" : "bonus__faq-list"
+            })
+          </div>
+        </div>
+        <form class="question content-js hidden" data-category="question">
+          <div class="question__select">
+            <label for="theme">Тема сообщения</label>
+            <select id="theme">
+              <option disabled selected>Укажите тему сообщения</option>
+              <option>Тема 1</option>
+              <option>Тема 2</option>
+              <option>Тема 3</option>
+            </select>
+          </div>
+          <label for="text">Ваше сообщение</label>
+          <textarea id="text"></textarea>
+          <button class="button button_colored">Задать вопрос</button>
+        </form>
+      </div>
+    </section>
+  </main>
+  @@include('footer/index.html', {
+  "link" : "/"
+  })
+  <script src="script.js"></script>
+</body>
+
+</html>

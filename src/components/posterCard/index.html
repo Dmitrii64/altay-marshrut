@@ -1,0 +1,18 @@
+<div class="swiper-slide poster-card">
+    <img class="poster-card__img" src="@@imageURL" alt="tour">
+    @@include('ui/favoriteIcon/index.html', {
+      "classes" : "poster-card__fav favorite_small"
+    })
+    <div class="poster-card__info">
+      <p class="poster-card__days">@@days</p>
+      <h2 class="poster-card__title">@@title</h2>
+      <p class="poster-card__text">@@text</p>
+      <button class="tour__description">Описание тура</button>
+      <div class="tour__buttons">
+        <a class="button tour__button" href="#">Забронировать место</a>
+        @@include('ui/favoriteIcon/index.html', {
+        "classes" : ""
+        })
+      </div>
+    </div>
+</div>

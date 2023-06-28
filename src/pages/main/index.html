@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <link href="/common.css" rel="stylesheet" />
+  <link href="style.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/fonts/fonts.css" />
+  <link rel="apple-touch-icon" sizes="180x180" href="static/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="static/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="static/images/favicon-16x16.png">
+  <title>Главная</title>
+</head>
+
+<body>
+  @@include('header/index.html', {
+  "link" : "#",
+  "classes" : ""
+  })
+  <main>
+    <section class="poster">
+      <div class="poster__tours">
+        <div class="tour">
+          <p class="tour__days">7 дней</p>
+          <h1 class="tour__title">ТАЙНЫ МУЛЬТИНСКИХ ОЗЕР</h1>
+          <p class="tour__text">Отдых с прогулками вдоль высокогорных заповедных озер, а также на водопад Куйгук.
+            Прогулка на смотровую, с которой вы увидите Уймонскую долину. </p>
+          <button class="tour__description">Описание тура</button>
+          <div class="tour__buttons">
+            <a class="button tour__button" href="#">Забронировать место</a>
+            @@include('ui/favoriteIcon/index.html', {
+            "classes" : ""
+            })
+          </div>
+        </div>
+        <div class="poster-swiper swiper">
+          <div class="swiper-wrapper">
+            @@include('posterCard/index.html', {
+            "imageURL" : "/static/images/tour-1.jpg",
+            "days" : "3 дня",
+            "title" : "Горные приключения",
+            "text" : "Отдых с прогулками вдоль высокогорных заповедных озер, а также на водопад Куйгук. Прогулка на смотровую, с которой вы увидите Уймонскую долину."
+            })
+            @@include('posterCard/index.html', {
+            "imageURL" : "/static/images/tour-2.jpg",
+            "days" : "5 дней",
+            "title" : "знакомство с алтаем",
+            "text" : "Отдых с прогулками вдоль высокогорных заповедных озер, а также на водопад Куйгук. Прогулка на смотровую, с которой вы увидите Уймонскую долину."
+            })
+            @@include('posterCard/index.html', {
+            "imageURL" : "/static/images/tour-3.jpg",
+            "days" : "6 дней",
+            "title" : "авторский треккинг тур",
+            "text" : "Отдых с прогулками вдоль высокогорных заповедных озер, а также на водопад Куйгук. Прогулка на смотровую, с которой вы увидите Уймонскую долину."
+            })
+            @@include('posterCard/index.html', {
+            "imageURL" : "/static/images/tour-1.jpg",
+            "days" : "3 дня",
+            "title" : "Горные приключения",
+            "text" : "Отдых с прогулками вдоль высокогорных заповедных озер, а также на водопад Куйгук. Прогулка на смотровую, с которой вы увидите Уймонскую долину."
+            })
+            @@include('posterCard/index.html', {
+            "imageURL" : "/static/images/tour-2.jpg",
+            "days" : "5 дней",
+            "title" : "знакомство с алтаем",
+            "text" : "Отдых с прогулками вдоль высокогорных заповедных озер, а также на водопад Куйгук. Прогулка на смотровую, с которой вы увидите Уймонскую долину."
+            })
+            @@include('posterCard/index.html', {
+            "imageURL" : "/static/images/tour-3.jpg",
+            "days" : "6 дней",
+            "title" : "авторский треккинг тур",
+            "text" : "Отдых с прогулками вдоль высокогорных заповедных озер, а также на водопад Куйгук. Прогулка на смотровую, с которой вы увидите Уймонскую долину."
+            })
+            @@include('posterCard/index.html', {
+            "imageURL" : "/static/images/tour-1.jpg",
+            "days" : "3 дня",
+            "title" : "Горные приключения",
+            "text" : "Отдых с прогулками вдоль высокогорных заповедных озер, а также на водопад Куйгук. Прогулка на смотровую, с которой вы увидите Уймонскую долину."
+            })
+            @@include('posterCard/index.html', {
+            "imageURL" : "/static/images/tour-2.jpg",
+            "days" : "5 дней",
+            "title" : "знакомство с алтаем",
+            "text" : "Отдых с прогулками вдоль высокогорных заповедных озер, а также на водопад Куйгук. Прогулка на смотровую, с которой вы увидите Уймонскую долину."
+            })
+            @@include('posterCard/index.html', {
+            "imageURL" : "/static/images/tour-3.jpg",
+            "days" : "6 дней",
+            "title" : "авторский треккинг тур",
+            "text" : "Отдых с прогулками вдоль высокогорных заповедных озер, а также на водопад Куйгук. Прогулка на смотровую, с которой вы увидите Уймонскую долину."
+            })
+            @@include('posterCard/index.html', {
+            "imageURL" : "/static/images/tour-1.jpg",
+            "days" : "3 дня",
+            "title" : "Горные приключения",
+            "text" : "Отдых с прогулками вдоль высокогорных заповедных озер, а также на водопад Куйгук. Прогулка на смотровую, с которой вы увидите Уймонскую долину."
+            })
+            @@include('posterCard/index.html', {
+            "imageURL" : "/static/images/tour-2.jpg",
+            "days" : "5 дней",
+            "title" : "знакомство с алтаем",
+            "text" : "Отдых с прогулками вдоль высокогорных заповедных озер, а также на водопад Куйгук. Прогулка на смотровую, с которой вы увидите Уймонскую долину."
+            })
+          </div>
+          <div class="swiper-nav">
+            <div class="poster-swiper-button-prev swiper-button-prev"></div>
+            <div class="poster-swiper-button-next swiper-button-next"></div>
+            <div class="poster-swiper-pagination swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="near container">
+      <h2 class="title-grd near__title">Ближайшие туры</h2>
+      <ul class="near__nav">
+        <li class="near__month near__month_active">октябрь</li>
+        <li class="near__month">ноябрь</li>
+        <li class="near__month">декабрь</li>
+        <li class="near__month">январь</li>
+      </ul>
+      <ul class="near__tours">
+        @@include('tourCard/index.html', {
+        "imgURL" : "/static/images/tour-1.jpg",
+        "days": "7 дней",
+        "data": "20.10.2022",
+        "title": "Горные приключения",
+        "text": "Отдых с прогулками вдоль высокогорных заповедных озер, а также на водопад Куйгук."
+        })
+        @@include('tourCard/index.html', {
+        "imgURL" : "/static/images/tour-2.jpg",
+        "days": "7 дней",
+        "data": "20.10.2022",
+        "title": "знакомство с алтаем",
+        "text": "Отдых с прогулками вдоль высокогорных заповедных озер, а также на водопад Куйгук."
+        })
+        @@include('tourCard/index.html', {
+        "imgURL" : "/static/images/tour-3.jpg",
+        "days": "7 дней",
+        "data": "20.10.2022",
+        "title": "авторский треккинг тур",
+        "text": "Отдых с прогулками вдоль высокогорных заповедных озер, а также на водопад Куйгук."
+        })
+        @@include('tourCard/index.html', {
+        "imgURL" : "/static/images/poster.jpg",
+        "days": "7 дней",
+        "data": "20.10.2022",
+        "title": "ТАЙНЫ МУЛЬТИНСКИХ ОЗЕР",
+        "text": "Отдых с прогулками вдоль высокогорных заповедных озер, а также на водопад Куйгук."
+        })
+      </ul>
+    </section>
+    @@include('blocks/pickBlock/index.html')
+    @@include('blocks/galleryBlock/index.html')
+    @@include('blocks/cashbackBlock/index.html')
+    <section class="products container">
+      <div class="products__header">
+        <h2 class="title-h2 products__title">Нужное для похода</h2>
+        <div class="products__swiper-buttons">
+          <div class="products-swiper-button-prev swiper-button-prev swiper-button-prev_black"></div>
+          <div class="products-swiper-button-next swiper-button-next swiper-button-next_black"></div>
+        </div>
+      </div>
+      <div class="swiper products-swiper">
+        <ul class="products__list swiper-wrapper">
+          @@include('productCard/index.html', {
+          "imgURL" : "/static/images/product-1.jpg",
+          "title" : "Рюкзак походный, большой, синий",
+          "amount": "3 000 руб.",
+          "classes": "products__item swiper-slide"
+          })
+          @@include('productCard/index.html', {
+          "imgURL" : "/static/images/product-2.jpg",
+          "title" : "Рюкзак походный, большой, синий",
+          "amount": "3 000 руб.",
+          "classes": "products__item swiper-slide"
+          })
+          @@include('productCard/index.html', {
+          "imgURL" : "/static/images/product-3.jpg",
+          "title" : "Рюкзак походный, большой, синий",
+          "amount": "3 000 руб.",
+          "classes": "products__item swiper-slide"
+          })
+          @@include('productCard/index.html', {
+          "imgURL" : "/static/images/product-4.jpg",
+          "title" : "Рюкзак походный, большой, синий",
+          "amount": "3 000 руб.",
+          "classes": "products__item swiper-slide"
+          })
+        </ul>
+      </div>
+      <a href="#" class="products__link">Ко всем товарам</a>
+    </section>
+    @@include('blocks/aboutBlock/index.html')
+    @@include('blocks/gidsBlock/index.html')
+    @@include('blocks/faqBlock/index.html')
+    @@include('blocks/reviewBlock/index.html')
+    <section class="blog container">
+      <div class="blog__header">
+        <h2 class="title-h2 blog__title">Полезная информация</h2>
+        <div class="blog__swiper-buttons">
+          <div class="blog-swiper-button-prev swiper-button-prev swiper-button-prev_black"></div>
+          <div class="blog-swiper-button-next swiper-button-next swiper-button-next_black"></div>
+        </div>
+      </div>
+      <div class="swiper blog-swiper">
+        <ul class="blog__list swiper-wrapper">
+          @@include('blogCard/index.html', {
+          "classes" : "blog__item swiper-slide",
+          "imageURL" : "/static/images/blog-1.jpg",
+          "title": "Что взять с собой поход. Рекомендации бывалых туристов",
+          "text": "Чтобы поход запомнился на долго и только с хорошей стороны, не забудьте прихватить с собой ...."
+          })
+          @@include('blogCard/index.html', {
+          "classes" : "blog__item swiper-slide",
+          "imageURL" : "/static/images/blog-2.jpg",
+          "title": "Что взять с собой поход. Рекомендации бывалых туристов",
+          "text": "Чтобы поход запомнился на долго и только с хорошей стороны, не забудьте прихватить с собой ...."
+          })
+          @@include('blogCard/index.html', {
+          "classes" : "blog__item swiper-slide",
+          "imageURL" : "/static/images/blog-3.jpg",
+          "title": "Что взять с собой поход. Рекомендации бывалых туристов",
+          "text": "Чтобы поход запомнился на долго и только с хорошей стороны, не забудьте прихватить с собой ...."
+          })
+          @@include('blogCard/index.html', {
+          "classes" : "blog__item swiper-slide",
+          "imageURL" : "/static/images/blog-4.jpg",
+          "title": "Что взять с собой поход. Рекомендации бывалых туристов",
+          "text": "Чтобы поход запомнился на долго и только с хорошей стороны, не забудьте прихватить с собой ...."
+          })
+        </ul>
+      </div>
+    </section>
+    <img class="gif" src="/static/images/girl.gif" alt="girl" width="144" height="241">
+  </main>
+  @@include('footer/index.html', {
+    "link" : "#",
+    "classes" : ""
+    })
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="scripts.js"></script>
+</body>
+
+</html>

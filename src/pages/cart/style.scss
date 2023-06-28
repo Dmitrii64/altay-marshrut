@@ -1,0 +1,154 @@
+.webpage {
+  margin-bottom: 60px;
+
+  @media (max-width: 1024px) {
+    margin-bottom: 16px;
+  }
+}
+
+.cart {
+  padding-bottom: 200px;
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    padding-bottom: 120px;
+  }
+
+  &__list {
+    max-width: 600px;
+
+    @media (max-width: 1024px) {
+      max-width: 100%;
+    }
+  }
+
+  &__item {
+    display: flex;
+    padding: 24px 0;
+    border-bottom: 1px solid #D6D8E3;
+    width: 100%;
+
+    @media (max-width: 1024px) {
+      justify-content: space-between;
+    }
+
+    @media (max-width: 600px) {
+      flex-wrap: wrap;
+    }
+
+    &-img {
+      width: 88px;
+      height: 102px;
+      object-fit: contain;
+      border-radius: 8px;
+
+      @media (max-width: 600px) {
+        width: 100%;
+        height: 263px;
+        object-fit: cover;
+      }
+    }
+
+    &-cell {
+      padding: 13px 30px 0;
+      border-left: 1px solid #E7E9F1;
+
+      &:first-of-type {
+        padding-left: 17px;
+        border-left: none;
+      }
+
+      &:last-child {
+        padding-right: 0;
+        min-width: 111px;
+      }
+
+      @media (max-width: 1200px) {
+        padding: 13px 20px 0;
+      }
+
+      @media (max-width: 600px) {
+        padding: 11px 0 0;
+        border: none;
+
+        &:first-of-type {
+          width: 100%;
+          padding-left: 0;
+        }
+      }
+    }
+
+    &-title {
+      font-size: 14px;
+      line-height: calc(21 / 14);
+      color: #6C6D72;
+    }
+
+    &-text {
+      margin-top: 4px;
+      color: #0E0D0D;
+      font-size: 15px;
+      font-family: "Akrobat", "Helvetica", sans-serif;
+      font-weight: 800;
+      line-height: calc(26 / 15);
+      text-transform: uppercase;
+
+      @media (max-width: 1024px) {
+        margin-top: 0;
+      }
+
+      @media (max-width: 600px) {
+        font-size: 23px;
+      }
+    }
+
+    &-amount {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      color: #0E0D0D;
+      font-size: 20px;
+      font-family: "Akrobat", "Helvetica", sans-serif;
+      font-weight: 700;
+      line-height: 26px;
+      text-transform: uppercase;
+
+      p {
+        margin: 0 14px;
+      }
+    }
+  }
+
+  &__form {
+    width: 400px;
+    margin-left: 50px;
+
+    @media (max-width: 1024px) {
+      margin: 40px auto 0;
+      width: 100%;
+      max-width: 580px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 35px;
+    color: #0E0D0D;
+    font-size: 25px;
+    font-family: "Akrobat", "Helvetica", sans-serif;
+    font-weight: 800;
+    line-height: calc(19 / 25);
+    text-transform: uppercase;
+  }
+
+  &__input {
+    margin-bottom: 16px;
+    height: 60px;
+  }
+
+  .button {
+    width: 100%;
+    margin-top: 14px;
+  }
+}

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <link href="/common.css" rel="stylesheet" />
+  <link href="style.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/fonts/fonts.css" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../../static/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../..static/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../static/images/favicon-16x16.png">
+  <title>Страница тура</title>
+</head>
+
+<body>
+  @@include('header/index.html', {
+  "link" : "/"
+  })
+  <main>
+    <section class="poster">
+      <div class="poster__wrapper container">
+        <div class="poster__tour">
+          <p class="poster__days">7 дней</p>
+          <h1 class="poster__title">ТАЙНЫ МУЛЬТИНСКИХ ОЗЕР</h1>
+          <p class="poster__text">Отдых с прогулками вдоль высокогорных заповедных озер, а также на водопад Куйгук.
+            Прогулка на смотровую, с которой вы увидите Уймонскую долину. </p>
+        </div>
+        <div class="poster__info">
+          <div class="poster__info-item">
+            <p class="poster__info-title">ближайшие даты</p>
+            <p class="poster__info-text">30.03.2023</p>
+          </div>
+          <div class="poster__info-item">
+            <p class="poster__info-title">Продолжительность</p>
+            <p class="poster__info-text">7 дней</p>
+          </div>
+          <div class="poster__info-item">
+            <p class="poster__info-title">Протяженность</p>
+            <p class="poster__info-text">800 км</p>
+          </div>
+          <div class="poster__info-item">
+            <p class="poster__info-title">Количество человек</p>
+            <p class="poster__info-text">10 человек</p>
+          </div>
+          <div class="poster__info-item">
+            <p class="poster__info-title">Сложность тура</p>
+            <p class="poster__info-text">4 из 10</p>
+          </div>
+          <div class="poster__info-item">
+            <p class="poster__info-title">Размещение</p>
+            <p class="poster__info-text">2-5 мест. Домики или палатки</p>
+          </div>
+          <div class="poster__info-item">
+            <p class="poster__info-title">Питание</p>
+            <p class="poster__info-text">2 раза в день</p>
+          </div>
+        </div>
+      </div>
+      <div class="poster__buttons container">
+        <a class="button poster__button" href="#">Забронировать место</a>
+        <a class="button poster__button" href="#">Зарезервировать</a>
+        @@include('ui/favoriteIcon/index.html', {
+        "classes" : "poster__button-favorite"
+        })
+      </div>
+    </section>
+    <section class="program container">
+      <div class="swiper program-swiper">
+        <ul class="swiper-wrapper">
+          <li class="swiper-slide day">
+            <div class="day__info">
+              <p class="day__number">1 день</p>
+              <p class="day__title">«Чуйский тракт, Замульта»</p>
+              <p class="day__transport">(600 км на авто, 2 км пешком)</p>
+            </div>
+            <h2 class="day__title-grd title-grd">1 день</h2>
+            <div class="day__description">
+              <p class="day__text">В день тура наш автобус встретит вас в Барнауле.Сегодня мы прибудем в с. Замульта —
+                отправной точки к Мультинским озерам. Но в начале пути увидем бескрайние поля приалтайской равнины
+                различных посевных культур. Поля разных цветов и оттенков. Перед республикой Алтай нас встретит огромная
+                гора — Бабырган! Есть мнение, что она — потухший вулкан.А еще по пути будем взирать на очаровательные
+                пейзажи лесистых гор и преодолеем огромный Семинский перевал (1770 м) — один из самых высоких перевалов
+                Чуйского тракта, находящийся на его 583 километре. Обед около 13:00. Ужин около 21:00 на турбазе в с.
+                Замульта.</p>
+              <div class="swiper img-swiper">
+                <div class="day__swiper-buttons">
+                  <div class="img-swiper-button-prev swiper-button-prev"></div>
+                  <div class="img-swiper-button-next swiper-button-next"></div>
+                  </div>
+                <div class="day__images swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img class="day__img" src="/static/images/tour-day-1.jpg" alt="day-1">
+                  </div>
+                  <div class="swiper-slide">
+                    <img class="day__img" src="/static/images/tour-day-2.jpg" alt="day-1">
+                  </div>
+                  <div class="swiper-slide">
+                    <img class="day__img" src="/static/images/tour-day-2.jpg" alt="day-1">
+                  </div>
+                  <div class="swiper-slide">
+                    <img class="day__img" src="/static/images/tour-day-1.jpg" alt="day-1">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="swiper-slide day">
+            <div class="day__info">
+              <p class="day__number">2 день</p>
+              <p class="day__title">«Чуйский тракт, Замульта»</p>
+              <p class="day__transport">(600 км на авто, 2 км пешком)</p>
+            </div>
+            <h2 class="day__title-grd title-grd">2 день</h2>
+            <div class="day__description">
+              <p class="day__text">В день тура наш автобус встретит вас в Барнауле.Сегодня мы прибудем в с. Замульта —
+                отправной точки к Мультинским озерам. Но в начале пути увидем бескрайние поля приалтайской равнины
+                различных посевных культур. Поля разных цветов и оттенков. Перед республикой Алтай нас встретит огромная
+                гора — Бабырган! Есть мнение, что она — потухший вулкан.А еще по пути будем взирать на очаровательные
+                пейзажи лесистых гор и преодолеем огромный Семинский перевал (1770 м) — один из самых высоких перевалов
+                Чуйского тракта, находящийся на его 583 километре. Обед около 13:00. Ужин около 21:00 на турбазе в с.
+                Замульта.</p>
+                <div class="swiper img-swiper">
+                  <div class="day__swiper-buttons">
+                    <div class="img-swiper-button-prev swiper-button-prev"></div>
+                    <div class="img-swiper-button-next swiper-button-next"></div>
+                    </div>
+                  <div class="day__images swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img class="day__img" src="/static/images/tour-day-1.jpg" alt="day-1">
+                    </div>
+                    <div class="swiper-slide">
+                      <img class="day__img" src="/static/images/tour-day-2.jpg" alt="day-1">
+                    </div>
+                    <div class="swiper-slide">
+                      <img class="day__img" src="/static/images/tour-day-2.jpg" alt="day-1">
+                    </div>
+                    <div class="swiper-slide">
+                      <img class="day__img" src="/static/images/tour-day-1.jpg" alt="day-1">
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </li>
+        </ul>
+        <div class="program__swiper-buttons">
+          <div class="program-swiper-button-prev swiper-button-prev swiper-button-prev_black"></div>
+          <div class="program-swiper-button-next swiper-button-next swiper-button-next_black"></div>
+          <p class="program__next">Смотреть программу <span>2 дня</span></p>
+        </div>
+      </div>
+    </section>
+    @@include('blocks/calendarBlock/index.html')
+    <section class="map">
+      <h2 class="map__title title-h2 container">Карта тура</h2>
+      <div><a href="https://yandex.ru/maps?utm_medium=mapframe&utm_source=maps"
+          style="color:#eee;font-size:12px;position:absolute;top:0px;">Яндекс Карты</a><a
+          href="https://yandex.ru/maps/?ll=85.497595%2C52.023226&utm_medium=mapframe&utm_source=maps&z=9.44"
+          style="color:#eee;font-size:12px;position:absolute;top:14px;">Алтайский край — Яндекс Карты</a><iframe
+          class="map__iframe" src="https://yandex.ru/map-widget/v1/?ll=85.497595%2C52.023226&z=9.44" width="560"
+          height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+    </section>
+    <section class="partners container">
+      <h2 class="title-h2">сертификаты партнеров</h2>
+      <ul class="partners__list">
+        <li class="partners__item">
+          <img class="partners__item-img" src="/static/images/partner.jpg" alt="partner">
+          <h3 class="partners__item-title">20% скидка на все кофе</h3>
+          <p class="partners__item-text">Описание сертификата</p>
+          <span class="partners__item-icon">?</span>
+        </li>
+        <li class="partners__item">
+          <img class="partners__item-img" src="/static/images/partner.jpg" alt="partner">
+          <h3 class="partners__item-title">20% скидка на все кофе</h3>
+          <p class="partners__item-text">Описание сертификата</p>
+          <span class="partners__item-icon">?</span>
+        </li>
+        <li class="partners__item">
+          <img class="partners__item-img" src="/static/images/partner.jpg" alt="partner">
+          <h3 class="partners__item-title">20% скидка на все кофе</h3>
+          <p class="partners__item-text">Описание сертификата</p>
+          <span class="partners__item-icon">?</span>
+        </li>
+      </ul>
+    </section>
+    @@include('blocks/gidsBlock/index.html')
+    @@include('blocks/galleryBlock/index.html')
+    @@include('blocks/reviewBlock/index.html')
+    @@include('blocks/faqBlock/index.html')
+    @@include('blocks/calendarBlock/index.html')
+  </main>
+  @@include('footer/index.html', {
+  "link" : "/"
+  })
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="index.js"></script>
+</body>
+
+</html>

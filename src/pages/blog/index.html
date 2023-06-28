@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+  <link href="/common.css" rel="stylesheet" />
+  <link href="style.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/fonts/fonts.css" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../../static/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../..static/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../static/images/favicon-16x16.png">
+  <title>Для туристов</title>
+</head>
+
+<body>
+  @@include('header/index.html', {
+  "link" : "/",
+  "classes" : "header_white"
+  })
+  <main>
+    @@include('blocks/headerPageBlock/index.html', {
+    "title" : "Для туристов"
+    })
+    <div class="webpage__type container">
+      <select class="webpage__type-select">
+        <option>Статьи</option>
+        <option>Рекомендации</option>
+        <option>ЧЗВ</option>
+        <option>Шаблоны документов</option>
+        <option>Тесты, игры</option>
+      </select>
+    </div>
+    <section class="blog-container container">
+      <ul class="webpage-navigation">
+        <li class="webpage-navigation__item webpage-navigation__item_active" data-category="articles">Статьи</li>
+        <li class="webpage-navigation__item" data-category="recomendation">Рекомендации</li>
+        <li class="webpage-navigation__item" data-category="faq">ЧЗВ</li>
+        <li class="webpage-navigation__item" data-category="documents">Шаблоны документов</li>
+        <li class="webpage-navigation__item" data-category="test">Тесты, игры</li>
+      </ul>
+      <div class="blog-content">
+        <ul class="articles content-js" data-category="articles">
+          @@include('blogCard/index.html', {
+          "classes" : "articles__item",
+          "imageURL" : "/static/images/blog-1.jpg",
+          "title": "Что взять с собой поход. Рекомендации бывалых туристов",
+          "text": "Чтобы поход запомнился на долго и только с хорошей стороны, не забудьте прихватить с собой ...."
+          })
+          @@include('blogCard/index.html', {
+          "classes" : "articles__item",
+          "imageURL" : "/static/images/blog-2.jpg",
+          "title": "Что взять с собой поход. Рекомендации бывалых туристов",
+          "text": "Чтобы поход запомнился на долго и только с хорошей стороны, не забудьте прихватить с собой ...."
+          })
+          @@include('blogCard/index.html', {
+          "classes" : "articles__item",
+          "imageURL" : "/static/images/blog-3.jpg",
+          "title": "Что взять с собой поход. Рекомендации бывалых туристов",
+          "text": "Чтобы поход запомнился на долго и только с хорошей стороны, не забудьте прихватить с собой ...."
+          })
+          @@include('blogCard/index.html', {
+          "classes" : "articles__item",
+          "imageURL" : "/static/images/blog-4.jpg",
+          "title": "Что взять с собой поход. Рекомендации бывалых туристов",
+          "text": "Чтобы поход запомнился на долго и только с хорошей стороны, не забудьте прихватить с собой ...."
+          })
+          @@include('blogCard/index.html', {
+          "classes" : "articles__item",
+          "imageURL" : "/static/images/blog-3.jpg",
+          "title": "Что взять с собой поход. Рекомендации бывалых туристов",
+          "text": "Чтобы поход запомнился на долго и только с хорошей стороны, не забудьте прихватить с собой ...."
+          })
+          @@include('blogCard/index.html', {
+          "classes" : "articles__item",
+          "imageURL" : "/static/images/blog-2.jpg",
+          "title": "Что взять с собой поход. Рекомендации бывалых туристов",
+          "text": "Чтобы поход запомнился на долго и только с хорошей стороны, не забудьте прихватить с собой ...."
+          })
+          @@include('blogCard/index.html', {
+          "classes" : "articles__item",
+          "imageURL" : "/static/images/blog-1.jpg",
+          "title": "Что взять с собой поход. Рекомендации бывалых туристов",
+          "text": "Чтобы поход запомнился на долго и только с хорошей стороны, не забудьте прихватить с собой ...."
+          })
+          @@include('blogCard/index.html', {
+          "classes" : "articles__item",
+          "imageURL" : "/static/images/blog-4.jpg",
+          "title": "Что взять с собой поход. Рекомендации бывалых туристов",
+          "text": "Чтобы поход запомнился на долго и только с хорошей стороны, не забудьте прихватить с собой ...."
+          })
+        </ul>
+        <ul class="articles content-js hidden" data-category="recomendation">
+          @@include('blogCard/index.html', {
+          "classes" : "articles__item",
+          "imageURL" : "/static/images/blog-1.jpg",
+          "title": "Что взять с собой поход. Рекомендации бывалых туристов",
+          "text": "Чтобы поход запомнился на долго и только с хорошей стороны, не забудьте прихватить с собой ...."
+          })
+          @@include('blogCard/index.html', {
+          "classes" : "articles__item",
+          "imageURL" : "/static/images/blog-2.jpg",
+          "title": "Что взять с собой поход. Рекомендации бывалых туристов",
+          "text": "Чтобы поход запомнился на долго и только с хорошей стороны, не забудьте прихватить с собой ...."
+          })
+          @@include('blogCard/index.html', {
+          "classes" : "articles__item",
+          "imageURL" : "/static/images/blog-3.jpg",
+          "title": "Что взять с собой поход. Рекомендации бывалых туристов",
+          "text": "Чтобы поход запомнился на долго и только с хорошей стороны, не забудьте прихватить с собой ...."
+          })
+          @@include('blogCard/index.html', {
+          "classes" : "articles__item",
+          "imageURL" : "/static/images/blog-4.jpg",
+          "title": "Что взять с собой поход. Рекомендации бывалых туристов",
+          "text": "Чтобы поход запомнился на долго и только с хорошей стороны, не забудьте прихватить с собой ...."
+          })
+          @@include('blogCard/index.html', {
+          "classes" : "articles__item",
+          "imageURL" : "/static/images/blog-3.jpg",
+          "title": "Что взять с собой поход. Рекомендации бывалых туристов",
+          "text": "Чтобы поход запомнился на долго и только с хорошей стороны, не забудьте прихватить с собой ...."
+          })
+          @@include('blogCard/index.html', {
+          "classes" : "articles__item",
+          "imageURL" : "/static/images/blog-2.jpg",
+          "title": "Что взять с собой поход. Рекомендации бывалых туристов",
+          "text": "Чтобы поход запомнился на долго и только с хорошей стороны, не забудьте прихватить с собой ...."
+          })
+          @@include('blogCard/index.html', {
+          "classes" : "articles__item",
+          "imageURL" : "/static/images/blog-1.jpg",
+          "title": "Что взять с собой поход. Рекомендации бывалых туристов",
+          "text": "Чтобы поход запомнился на долго и только с хорошей стороны, не забудьте прихватить с собой ...."
+          })
+          @@include('blogCard/index.html', {
+          "classes" : "articles__item",
+          "imageURL" : "/static/images/blog-3.jpg",
+          "title": "Что взять с собой поход. Рекомендации бывалых туристов",
+          "text": "Чтобы поход запомнился на долго и только с хорошей стороны, не забудьте прихватить с собой ...."
+          })
+        </ul>
+        <div class="faq-content content-js hidden" data-category="faq">
+          <ul class="faq-content__categories">
+            <li class="faq-content__category faq-content__category_active">Туры</li>
+            <li class="faq-content__category">Экипировка</li>
+            <li class="faq-content__category">Документы</li>
+            <li class="faq-content__category">Общие вопросы</li>
+          </ul>
+          @@include('ui/accordion/index.html', {
+          "classes" : "faq-content__list"
+          })
+        </div>
+        <ul class="documents content-js hidden" data-category="documents">
+          <li class="documents__item">
+            <a class="documents__link" href="#">Шаблоны договора на оказание услуг</a>
+          </li>
+          <li class="documents__item">
+            <a class="documents__link" href="#">Шаблоны договора на оказание услуг</a>
+          </li>
+          <li class="documents__item">
+            <a class="documents__link" href="#">Шаблоны договора на оказание услуг</a>
+          </li>
+          <li class="documents__item">
+            <a class="documents__link" href="#">Шаблоны договора на оказание услуг</a>
+          </li>
+          <li class="documents__item">
+            <a class="documents__link" href="#">Шаблоны договора на оказание услуг</a>
+          </li>
+        </ul>
+        <div class="test content-js hidden" data-category="test">
+          <p class="test__title">Пройди тест</p>
+          <p class="test__text">узнай какой ты турист</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  @@include('footer/index.html', {
+  "link" : "/"
+  })
+  <script src="script.js"></script>
+</body>
+
+</html>

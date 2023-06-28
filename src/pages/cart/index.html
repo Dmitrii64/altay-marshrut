@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+  <link href="/common.css" rel="stylesheet" />
+  <link href="style.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/fonts/fonts.css" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../../static/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../..static/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../static/images/favicon-16x16.png">
+  <title>Корзина</title>
+</head>
+
+<body>
+  @@include('header/index.html', {
+  "link" : "/",
+  "classes" : "header_white"
+  })
+  <main>
+    @@include('blocks/headerPageBlock/index.html', {
+    "title" : "Корзина"
+    })
+    <section class="container">
+      <form class="cart">
+        <ul class="cart__list">
+          <li class="cart__item">
+            <img class="cart__item-img" src="/static/images/product-1.jpg" alt="product-1">
+            <div class="cart__item-cell">
+              <p class="cart__item-title">Название</p>
+              <p class="cart__item-text">рюкзак походный, большой, синий</p>
+            </div>
+            <div class="cart__item-cell">
+              <p class="cart__item-title">Стоимость</p>
+              <p class="cart__item-text">3 000 руб.</p>
+            </div>
+            <div class="cart__item-cell">
+              <p class="cart__item-title">Количество</p>
+              <div class="cart__item-amount">
+                <button>-</button>
+                <p>2</p>
+                <button>+</button>
+              </div>
+            </div>
+          </li>
+          <li class="cart__item">
+            <img class="cart__item-img" src="/static/images/product-1.jpg" alt="product-1">
+            <div class="cart__item-cell">
+              <p class="cart__item-title">Название</p>
+              <p class="cart__item-text">рюкзак походный, большой, синий</p>
+            </div>
+            <div class="cart__item-cell">
+              <p class="cart__item-title">Стоимость</p>
+              <p class="cart__item-text">3 000 руб.</p>
+            </div>
+            <div class="cart__item-cell">
+              <p class="cart__item-title">Количество</p>
+              <div class="cart__item-amount">
+                <button>-</button>
+                <p>2</p>
+                <button>+</button>
+              </div>
+            </div>
+          </li>
+          <li class="cart__item">
+            <img class="cart__item-img" src="/static/images/product-1.jpg" alt="product-1">
+            <div class="cart__item-cell">
+              <p class="cart__item-title">Название</p>
+              <p class="cart__item-text">рюкзак походный, большой, синий</p>
+            </div>
+            <div class="cart__item-cell">
+              <p class="cart__item-title">Стоимость</p>
+              <p class="cart__item-text">3 000 руб.</p>
+            </div>
+            <div class="cart__item-cell">
+              <p class="cart__item-title">Количество</p>
+              <div class="cart__item-amount">
+                <button>-</button>
+                <p>2</p>
+                <button>+</button>
+              </div>
+            </div>
+          </li>
+          <li class="cart__item">
+            <img class="cart__item-img" src="/static/images/product-1.jpg" alt="product-1">
+            <div class="cart__item-cell">
+              <p class="cart__item-title">Название</p>
+              <p class="cart__item-text">рюкзак походный, большой, синий</p>
+            </div>
+            <div class="cart__item-cell">
+              <p class="cart__item-title">Стоимость</p>
+              <p class="cart__item-text">3 000 руб.</p>
+            </div>
+            <div class="cart__item-cell">
+              <p class="cart__item-title">Количество</p>
+              <div class="cart__item-amount">
+                <button>-</button>
+                <p>2</p>
+                <button>+</button>
+              </div>
+            </div>
+          </li>
+          <li class="cart__item">
+            <img class="cart__item-img" src="/static/images/product-1.jpg" alt="product-1">
+            <div class="cart__item-cell">
+              <p class="cart__item-title">Название</p>
+              <p class="cart__item-text">рюкзак походный, большой, синий</p>
+            </div>
+            <div class="cart__item-cell">
+              <p class="cart__item-title">Стоимость</p>
+              <p class="cart__item-text">3 000 руб.</p>
+            </div>
+            <div class="cart__item-cell">
+              <p class="cart__item-title">Количество</p>
+              <div class="cart__item-amount">
+                <button>-</button>
+                <p>2</p>
+                <button>+</button>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <div class="cart__form">
+          <h2 class="cart__title">Оформите заказ</h2>
+          <label for="name">Как вас зовут</label>
+          <input class="cart__input" type="text" id="name">
+          <label for="mail">Ваш Email</label>
+          <input class="cart__input" type="email" id="mail">
+          <label for="tel">Ваш телефон</label>
+          <input class="cart__input" type="tel" id="tel">
+          <label for="address">Адрес доставки</label>
+          <input class="cart__input" type="text" id="address">
+          <button class="button button_colored">Оплатить</button>
+        </div>
+      </form>
+    </section>
+  </main>
+  @@include('footer/index.html', {
+  "link" : "/"
+  })
+</body>
+
+</html>

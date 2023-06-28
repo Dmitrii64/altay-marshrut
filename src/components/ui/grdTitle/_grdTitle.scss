@@ -1,0 +1,25 @@
+.title-grd {
+  position: absolute;
+  left: 0;
+  top: 60px;
+  width: min-content;
+  font-family: "Akrobat", "Helvetica", sans-serif;
+  font-weight: 800;
+  font-size: 149px;
+  line-height: calc(134/149);
+  text-align: end;
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: linear-gradient(180deg, #00ABEB 0%, #C55DA4 100%);
+  opacity: 0.15;
+  transform: rotate(-90deg);
+  pointer-events: none;
+
+  @media (max-width: 1024px) {
+    font-size: 69px;
+    transform: rotate(0);
+  }
+}

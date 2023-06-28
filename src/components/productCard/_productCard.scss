@@ -1,0 +1,42 @@
+.product-card {
+  transition: transform 0.4s;
+
+  &:hover {
+    transform: translateY(-20px);
+  }
+  
+  &__img-wrapper {
+    position: relative;
+    overflow: hidden;
+    height: 351px;
+    padding: 18px;
+  }
+
+  &__info {
+    padding: 25px 12px;
+    box-shadow: 0px -29px 20px -6px rgba(60, 76, 96, 0.17);
+    border-radius: 0 0 29px 29px;
+  }
+
+  &__title {
+    margin-bottom: 12px;
+    font-family: "Akrobat", "Helvetica", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: calc(26/24);
+    color: #0E0D0D;
+  }
+
+  &__amount {
+    margin-bottom: 25px;
+    font-family: "Akrobat", "Helvetica", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: calc(26/20);
+    color: #0E0D0D;
+  }
+
+  &__button {
+    width: 100%;
+  }
+}

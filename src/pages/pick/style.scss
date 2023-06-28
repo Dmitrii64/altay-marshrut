@@ -1,0 +1,24 @@
+.webpage {
+  margin-bottom: 0;
+
+  &__title {
+    display: none;
+
+    @media (max-width: 1024px) {
+     display: flex;
+    }
+  }
+}
+
+.pick {
+  @media (max-width: 1024px) {
+    margin-bottom: 90px;
+    padding-top: 40px;
+  }
+
+  &__title {
+    @media (max-width: 1024px) {
+      display: none;
+    }
+  }
+}

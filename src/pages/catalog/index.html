@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+  <link href="/common.css" rel="stylesheet" />
+  <link href="style.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/fonts/fonts.css" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../../static/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../..static/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../static/images/favicon-16x16.png">
+  <title>Каталог</title>
+</head>
+
+<body>
+  @@include('header/index.html', {
+  "link" : "/",
+  "classes" : "header_white"
+  })
+  <main>
+    <div class="container webpage">
+      <div class="webpage__breadcrumbs">
+        <a href="/">Главная</a>
+        <p>Каталог товаров</p>
+      </div>
+      <div class="webpage__header">
+        <h1 class="webpage__title">Каталог товаров</h1>
+        <form class="webpage__form" action="">
+          <div class="webpage__search">
+            <input class="webpage__search-input" type="search" placeholder="Поиск по товарам">
+            <button class="webpage__search-icon" type="button"></button>
+          </div>
+          <div class="webpage__sorting">
+            <p class="webpage__sorting-text">Сортировать:</p>
+            <select class="webpage__sorting-select">
+              <option>По стоимости</option>
+              <option>По цене</option>
+            </select>
+          </div>
+          <div class="webpage__type">
+            <select class="webpage__type-select">
+              <option>Все товары</option>
+              <option>Рюкзаки</option>
+              <option>Экипировка</option>
+              <option>Головные уборы</option>
+              <option>Походные пренадлежности</option>
+              <option>Палатки</option>
+            </select>
+          </div>
+        </form>
+      </div>
+    </div>
+    <section class="shop container">
+      <ul class="webpage-navigation">
+        <li class="webpage-navigation__item webpage-navigation__item_active">Все товары</li>
+        <li class="webpage-navigation__item">Рюкзаки</li>
+        <li class="webpage-navigation__item">Экипировка</li>
+        <li class="webpage-navigation__item">Головные уборы</li>
+        <li class="webpage-navigation__item">Походные пренадлежности</li>
+        <li class="webpage-navigation__item">Палатки</li>
+      </ul>
+      <ul class="shop__list">
+        @@include('productCard/index.html', {
+        "imgURL" : "/static/images/product-1.jpg",
+        "title" : "Рюкзак походный, большой, синий",
+        "amount": "3 000 руб.",
+        "classes": "shop__item"
+        })
+        @@include('productCard/index.html', {
+        "imgURL" : "/static/images/product-2.jpg",
+        "title" : "Рюкзак походный, большой, синий",
+        "amount": "3 000 руб.",
+        "classes": "shop__item"
+        })
+        @@include('productCard/index.html', {
+        "imgURL" : "/static/images/product-3.jpg",
+        "title" : "Рюкзак походный, большой, синий",
+        "amount": "3 000 руб.",
+        "classes": "shop__item"
+        })
+        @@include('productCard/index.html', {
+        "imgURL" : "/static/images/product-2.jpg",
+        "title" : "Рюкзак походный, большой, синий",
+        "amount": "3 000 руб.",
+        "classes": "shop__item"
+        })
+        @@include('productCard/index.html', {
+        "imgURL" : "/static/images/product-3.jpg",
+        "title" : "Рюкзак походный, большой, синий",
+        "amount": "3 000 руб.",
+        "classes": "shop__item"
+        })
+        @@include('productCard/index.html', {
+        "imgURL" : "/static/images/product-1.jpg",
+        "title" : "Рюкзак походный, большой, синий",
+        "amount": "3 000 руб.",
+        "classes": "shop__item"
+        })
+        @@include('productCard/index.html', {
+        "imgURL" : "/static/images/product-2.jpg",
+        "title" : "Рюкзак походный, большой, синий",
+        "amount": "3 000 руб.",
+        "classes": "shop__item"
+        })
+        @@include('productCard/index.html', {
+        "imgURL" : "/static/images/product-1.jpg",
+        "title" : "Рюкзак походный, большой, синий",
+        "amount": "3 000 руб.",
+        "classes": "shop__item"
+        })
+        @@include('productCard/index.html', {
+        "imgURL" : "/static/images/product-3.jpg",
+        "title" : "Рюкзак походный, большой, синий",
+        "amount": "3 000 руб.",
+        "classes": "shop__item"
+        })
+      </ul>
+    </section>
+  </main>
+  @@include('footer/index.html', {
+  "link" : "/"
+  })
+</body>
+
+</html>

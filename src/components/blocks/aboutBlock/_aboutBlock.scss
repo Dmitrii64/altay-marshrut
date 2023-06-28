@@ -1,0 +1,264 @@
+.about {
+  position: relative;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @media (max-width: 1024px) {
+    padding-top: 130px;
+    padding-bottom: 90px;
+  }
+
+  &__title {
+    left: -120px;
+    top: 270px;
+    width: max-content;
+
+    @media (max-width: 1024px) {
+      left: initial;
+      right: 60px;
+      top: 40px;
+    }
+
+    @media (max-width: 900px) {
+      right: 20px;
+    }
+
+    @media (max-width: 768px) {
+      right: 10px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-left: 200px;
+
+    @media (max-width: 1400px) {
+      margin-left: 100px;
+    }
+
+    @media (max-width: 1200px) {
+      margin-left: 0;
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: calc(24/14);
+    color: #44464D;
+    width: 35%;
+
+    @media (max-width: 1024px) {
+      width: 40%;
+    }
+
+    @media (max-width: 768px) {
+      width: 100%;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 35%;
+    height: fit-content;
+    margin-top: -150px;
+
+    @media (max-width: 1400px) {
+      margin-top: 0;
+    }
+
+    @media (max-width: 1024px) {
+      width: 40%;
+    }
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+  }
+
+  &__item {
+    width: 40%;
+    margin-top: 60px;
+
+    @media (max-width: 768px) {
+      margin-top: 40px;
+    }
+
+    &-title {
+      margin-bottom: 16px;
+      font-family: $font-title;
+      font-weight: 500;
+      font-size: 39px;
+      line-height: 52px;
+      text-transform: uppercase;
+      color: #303243;
+    }
+
+    &-text {
+      font-size: 14px;
+      line-height: calc(22/14);
+      color: #000000;
+      max-width: 70%;
+    }
+  }
+
+  &__video-wrapper {
+    position: relative;
+    width: 608px;
+    height: 404px;
+    border-radius: 8px;
+    overflow: hidden;
+
+    @media (max-width: 1400px) {
+      width: 47%;
+      height: 300px;
+    }
+
+    @media (max-width: 1024px) {
+      width: 47%;
+      height: 247px;
+    }
+
+    @media (max-width: 768px) {
+      width: 100%;
+      height: 300px;
+    }
+
+    @media (max-width: 600px) {
+      height: 247px;
+    }
+  }
+
+  &__video {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__video-preview {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    z-index: 2;
+
+    @media (max-width: 1400px) {
+      padding: 30px;
+    }
+  }
+
+  &__video-button {
+    position: relative;
+    width: 168px;
+    height: 168px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-image: url("/static/images/video-play.svg");
+    background-size: 15%;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    &::after {
+      width: 120px;
+      height: 120px;
+    }
+
+    &::before {
+      width: 80px;
+      height: 80px;
+    }
+
+    @media (max-width: 1024px) {
+      width: 100px;
+      height: 100px;
+
+      &::after {
+        width: 80px;
+        height: 80px;
+      }
+
+      &::before {
+        width: 60px;
+        height: 60px;
+      }
+    }
+  }
+
+  &__video-text {
+    max-width: 130px;
+    margin-top: 27px;
+    font-size: 14px;
+    line-height: calc(16/14);
+    text-align: center;
+    color: #fff;
+  }
+
+  &__blockquote {
+    margin-top: 200px;
+    width: 47%;
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 1024px) {
+      margin-top: 100px;
+    }
+
+    @media (max-width: 768px) {
+      width: 100%;
+      margin-top: 80px;
+    }
+
+    &-title {
+      max-width: 296px;
+      font-family: $font-title;
+      font-size: 22px;
+      line-height: calc(32/22);
+      color: #000000;
+      margin-bottom: 21px;
+    }
+
+    &-wrapper {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &-img {
+      display: block;
+      width: 36px;
+      height: 26px;
+      margin-top: 10px;
+      background-image: url("/static/images/blockquote.jpg");
+      background-repeat: no-repeat;
+    }
+
+    &-text {
+      max-width: 82%;
+      font-size: 14px;
+      line-height: calc(24/14);
+      color: #44464D;
+    }
+  }
+}

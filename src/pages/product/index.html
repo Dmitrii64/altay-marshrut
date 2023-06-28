@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <link href="/common.css" rel="stylesheet" />
+  <link href="style.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/fonts/fonts.css" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../../static/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../..static/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../static/images/favicon-16x16.png">
+  <title>Рюкзак походный, большой, синий</title>
+</head>
+
+<body>
+  @@include('header/index.html', {
+  "link" : "/",
+  "classes" : "header_white"
+  })
+  <main>
+    <div class="container webpage">
+      <div class="webpage__breadcrumbs">
+        <a href="/">Главная</a>
+        <a href="/pages/catalog">Каталог товаров</a>
+        <p>Рюкзак походный, большой, синий</p>
+      </div>
+    </div>
+    <section class="product container">
+      <div class="product__wrapper">
+        <div class="product__content">
+          <div class="product__header">
+            <h1 class="product__title">рюкзак походный, большой, синий</h1>
+            <span class="product__price">3 000 руб.</span>
+          </div>
+          <div class="product__image-wrapper">
+            <img src="/static/images/product-2.jpg" alt="product" class="product__image">
+          </div>
+          <p class="product__description">Lorem ipsum dolor sit amet consectetur. Tempus sagittis suspendisse ac nunc
+            tempor commodo duis purus quis. Ornare vitae auctor elementum tellus platea. Et risus aliquet felis aliquam
+            orci. Lorem ipsum dolor sit amet consectetur. Tempus sagittis suspendisse ac nunc tempor commodo duis purus
+            quis. Ornare vitae auctor elementum tellus platea. Et risus aliquet felis aliquam orci. </p>
+          <ul class="product__options">
+            <li class="product__option">
+              <p>Вес</p>
+              <span class="product__option-separator"></span>
+              <p>1кг</p>
+            </li>
+            <li class="product__option">
+              <p>Размер, см</p>
+              <span class="product__option-separator"></span>
+              <p>40х20х60</p>
+            </li>
+            <li class="product__option">
+              <p>Цвет</p>
+              <span class="product__option-separator"></span>
+              <p>Red</p>
+            </li>
+            <li class="product__option">
+              <p>Материал</p>
+              <span class="product__option-separator"></span>
+              <p>ткань</p>
+            </li>
+          </ul>
+          <div class="product__buttons">
+            <button class="button button_grd">Добавить в корзину</button>
+            <button class="button button_grd">Купить в один клик</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="product-tabs">
+      <ul class="product-tabs__list container">
+        <li class="product-tabs__item product-tabs__item_active">Описание</li>
+        <li class="product-tabs__item">Характеристики</li>
+        <li class="product-tabs__item">Оплата и доставка</li>
+        <li class="product-tabs__item">Отзывы</li>
+      </ul>
+      <div class="container">
+        <p class="product-tabs__text">Lorem ipsum dolor sit amet consectetur. Enim lectus magnis non condimentum massa.
+          Ut
+          arcu nunc velit ut suspendisse sed. Pharetra neque ornare purus sit in quis in. Massa ante platea neque
+          convallis eget pharetra varius suspendisse nunc. Urna mi eu elit hac velit tortor nisi pellentesque. Orci id
+          cursus suscipit ornare ridiculus neque a aliquet morbi. Placerat arcu sem vel purus consectetur orci sagittis
+          malesuada turpis. Accumsan aenean interdum ut lacus ipsum.
+          Pulvinar est tempor mi suspendisse diam integer in at ullamcorper. Dolor ut ultricies et donec at lacus
+          aliquet
+          amet adipiscing. Semper risus mi convallis risus. Pharetra sem urna congue vel nunc sed orci.</p>
+      </div>
+    </section>
+    <section class="products container">
+      <div class="products__header">
+        <h2 class="title-h2 products__title">с этим товаром берут</h2>
+        <div class="products__swiper-buttons">
+          <div class="products-extra-swiper-button-prev swiper-button-prev swiper-button-prev_black"></div>
+          <div class="products-extra-swiper-button-next swiper-button-next swiper-button-next_black"></div>
+        </div>
+      </div>
+      <div class="swiper products-extra-swiper">
+        <ul class="products__list swiper-wrapper">
+          @@include('productCard/index.html', {
+          "imgURL" : "/static/images/product-1.jpg",
+          "title" : "Рюкзак походный, большой, синий",
+          "amount": "3 000 руб.",
+          "classes": "products__item swiper-slide"
+          })
+          @@include('productCard/index.html', {
+          "imgURL" : "/static/images/product-2.jpg",
+          "title" : "Рюкзак походный, большой, синий",
+          "amount": "3 000 руб.",
+          "classes": "products__item swiper-slide"
+          })
+          @@include('productCard/index.html', {
+          "imgURL" : "/static/images/product-3.jpg",
+          "title" : "Рюкзак походный, большой, синий",
+          "amount": "3 000 руб.",
+          "classes": "products__item swiper-slide"
+          })
+          @@include('productCard/index.html', {
+          "imgURL" : "/static/images/product-4.jpg",
+          "title" : "Рюкзак походный, большой, синий",
+          "amount": "3 000 руб.",
+          "classes": "products__item swiper-slide"
+          })
+        </ul>
+      </div>
+    </section>
+    <section class="products container">
+      <div class="products__header">
+        <h2 class="title-h2 products__title">похожие товары</h2>
+        <div class="products__swiper-buttons">
+          <div class="products-similar-swiper-button-prev swiper-button-prev swiper-button-prev_black"></div>
+          <div class="products-similar-swiper-button-next swiper-button-next swiper-button-next_black"></div>
+        </div>
+      </div>
+      <div class="swiper products-similar-swiper">
+        <ul class="products__list swiper-wrapper">
+          @@include('productCard/index.html', {
+          "imgURL" : "/static/images/product-1.jpg",
+          "title" : "Рюкзак походный, большой, синий",
+          "amount": "3 000 руб.",
+          "classes": "products__item swiper-slide"
+          })
+          @@include('productCard/index.html', {
+          "imgURL" : "/static/images/product-2.jpg",
+          "title" : "Рюкзак походный, большой, синий",
+          "amount": "3 000 руб.",
+          "classes": "products__item swiper-slide"
+          })
+          @@include('productCard/index.html', {
+          "imgURL" : "/static/images/product-3.jpg",
+          "title" : "Рюкзак походный, большой, синий",
+          "amount": "3 000 руб.",
+          "classes": "products__item swiper-slide"
+          })
+          @@include('productCard/index.html', {
+          "imgURL" : "/static/images/product-4.jpg",
+          "title" : "Рюкзак походный, большой, синий",
+          "amount": "3 000 руб.",
+          "classes": "products__item swiper-slide"
+          })
+        </ul>
+      </div>
+    </section>
+  </main>
+  @@include('footer/index.html', {
+  "link" : "/"
+  })
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="index.js"></script>
+</body>
+
+</html>

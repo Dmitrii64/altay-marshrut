@@ -1,0 +1,31 @@
+<section class="gids container">
+  <h2 class="title-grd gids__title">Наши гиды</h2>
+  <div class="gids__swiper-buttons">
+    <div class="gids-swiper-button-prev swiper-button-prev swiper-button-prev_black"></div>
+    <div class="gids-swiper-button-next swiper-button-next swiper-button-next_black"></div>
+  </div>
+  <div class="swiper gids-swiper">
+    <ul class="gids__list swiper-wrapper">
+      @@include('gidCard/index.html', {
+      "classes" : "gids__item swiper-slide",
+      "imageURL" : "/static/images/gid-1.jpg",
+      "name" : "Иванов иван",
+      "text" : "Гид с 4х летним стажем, знает все скрытые места горного алтая, умее завязать узел 80 ю способами"
+      })
+      @@include('gidCard/index.html', {
+      "classes" : "gids__item swiper-slide",
+      "imageURL" : "/static/images/gid-2.jpg",
+      "name" : "Иванов иван",
+      "text" : "Гид с 4х летним стажем, знает все скрытые места горного алтая, умее завязать узел 80 ю способами",
+      "btn-class" : "play-button_inactive"
+      })
+      @@include('gidCard/index.html', {
+      "classes" : "gids__item swiper-slide",
+      "imageURL" : "/static/images/gid-3.jpg",
+      "name" : "Иванов иван",
+      "text" : "Гид с 4х летним стажем, знает все скрытые места горного алтая, умее завязать узел 80 ю способами",
+      "btn-class" : "play-button_inactive"
+      })
+    </ul>
+  </div>
+</section>

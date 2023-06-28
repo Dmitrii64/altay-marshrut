@@ -1,0 +1,32 @@
+.gid-card {
+
+  &__img-wrapper {
+    position: relative;
+    height: 350px;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 20px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+  &__name {
+    margin-top: 20px;
+    margin-bottom: 12px;
+    padding-left: 8px;
+    font-family: "Akrobat", "Helvetica", sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: calc(26/22);
+    text-transform: uppercase;
+    color: #0E0D0D;
+  }
+
+  &__description {
+    font-size: 14px;
+    line-height: calc(22/14);
+    padding-left: 8px;
+    color: #6A6A76;
+  }
+}

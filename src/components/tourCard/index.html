@@ -1,0 +1,26 @@
+<li class="tour-card">
+  <a href="/pages/tour">
+    <div class="tour-card__img-wrapper">
+      <img src="@@imgURL" alt="tour-1" class="tour-card__img" width="400" height="220">
+      <div class="tour-card__time">
+        <span>@@days</span>
+        <span>@@data</span>
+      </div>
+      @@include('ui/favoriteIcon/index.html', {
+      "classes" : "@@favoriteClass"
+      })
+    </div>
+    <div class="tour-card__info">
+      <h3 class="tour-card__info-title">@@title</h3>
+      <ul class="tour-card__hashtags">
+        <li class="tour-card__hashtag"># преодолеть себя</li>
+        <li class="tour-card__hashtag"># хочу экстрим</li>
+      </ul>
+      <p class="tour-card__text">@@text</p>
+    </div>
+    <div class="tour-card__buttons">
+      <button class="button button_grd"><span class="button-txt">Забронировать место</span></button>
+      <button class="tour-card__description">Описание тура</button>
+    </div>
+  </a>
+</li>

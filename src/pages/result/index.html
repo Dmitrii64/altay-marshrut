@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+  <link href="/common.css" rel="stylesheet" />
+  <link href="style.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/fonts/fonts.css" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../../static/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../..static/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../static/images/favicon-16x16.png">
+  <title>Подбор тура</title>
+</head>
+
+<body>
+  @@include('header/index.html', {
+  "link" : "/",
+  "classes" : "header_white"
+  })
+  <main>
+    <div class="container webpage">
+      <div class="webpage__breadcrumbs">
+        <a href="/">Главная</a>
+        <a href="/pages/pick">Подбор тура</a>
+        <p>Результат</p>
+      </div>
+      <div class="webpage__header">
+        <h1 class="webpage__title">для вас отлично подойдут</h1>
+        <a class="webpage__return" href="/pages/pick">Вернуться к выбору тура</a>
+      </div>
+    </div>
+    <section class="container">
+      <ul class="cards">
+        @@include('tourCard/index.html', {
+        "imgURL" : "/static/images/tour-1.jpg",
+        "days": "7 дней",
+        "data": "20.10.2022",
+        "title": "Горные приключения",
+        "text": "Отдых с прогулками вдоль высокогорных заповедных озер, а также на водопад Куйгук."
+        })
+        @@include('tourCard/index.html', {
+        "imgURL" : "/static/images/tour-2.jpg",
+        "days": "7 дней",
+        "data": "20.10.2022",
+        "title": "знакомство с алтаем",
+        "text": "Отдых с прогулками вдоль высокогорных заповедных озер, а также на водопад Куйгук."
+        })
+        @@include('tourCard/index.html', {
+        "imgURL" : "/static/images/tour-3.jpg",
+        "days": "7 дней",
+        "data": "20.10.2022",
+        "title": "авторский треккинг тур",
+        "text": "Отдых с прогулками вдоль высокогорных заповедных озер, а также на водопад Куйгук."
+        })
+        @@include('tourCard/index.html', {
+        "imgURL" : "/static/images/poster.jpg",
+        "days": "7 дней",
+        "data": "20.10.2022",
+        "title": "ТАЙНЫ МУЛЬТИНСКИХ ОЗЕР",
+        "text": "Отдых с прогулками вдоль высокогорных заповедных озер, а также на водопад Куйгук."
+        })
+      </ul>
+    </section>
+  </main>
+  @@include('footer/index.html', {
+  "link" : "/"
+  })
+</body>
+
+</html>

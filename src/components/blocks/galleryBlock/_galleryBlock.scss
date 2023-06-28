@@ -1,0 +1,37 @@
+.gallery {
+  padding: 50px 0 100px;
+  border-bottom: 2px solid #F3F4F8;
+
+  &__card {
+    position: relative;
+    height: 850px;
+    padding: 20px;
+    display: flex;
+    align-items: flex-end;
+
+    &:nth-child(odd) {
+      width: 460px;
+    }
+
+    &:nth-child(even) {
+      width: 600px;
+      margin-top: 60px;
+    }
+
+    @media (max-width: 1024px) {
+      height: 650px;
+    }
+
+    @media (max-width: 768px) {
+      height: 574px;
+
+      &:nth-child(odd) {
+        width: 300px;
+      }
+
+      &:nth-child(even) {
+        width: 400px;
+      }
+    }
+  }
+}
