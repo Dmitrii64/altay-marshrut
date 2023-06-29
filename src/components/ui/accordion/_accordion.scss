@@ -14,7 +14,7 @@
       width: 20px;
       height: 1px;
       background-color: #B0B0BA;
-      transition: transform 0.4s;
+      transition: transform 0.4s, background-color 0.4s;
     }
 
     &:before {
@@ -38,13 +38,21 @@
       &:before {
         transform: rotate(45deg);
       }
-  
+
       &:after {
         transform: rotate(-45deg);
       }
 
       .accordion__text {
         display: block;
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+      &::after,
+      &::before {
+        background-color: #000;
       }
     }
   }
@@ -55,6 +63,7 @@
     font-size: 20px;
     line-height: calc(26/20);
     color: #0E0D0D;
+    z-index: 3;
   }
 
   &__text {

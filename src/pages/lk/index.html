@@ -25,12 +25,12 @@
     })
     <div class="webpage__type container">
       <select class="webpage__type-select">
-        <option>Личные данные</option>
-        <option>Мои туры</option>
-        <option>Документы</option>
-        <option>Мои товары</option>
-        <option>Бонусы</option>
-        <option>Задать вопрос менеджеру</option>
+        <option data-category="info">Личные данные</option>
+        <option data-category="tours">Мои туры</option>
+        <option data-category="documents">Документы</option>
+        <option data-category="products">Мои товары</option>
+        <option data-category="bonus">Бонусы</option>
+        <option data-category="question">Задать вопрос менеджеру</option>
       </select>
     </div>
     <section class="lk-container container">
@@ -62,14 +62,14 @@
         </div>
         <div class="my-tours content-js hidden" data-category="tours">
           <ul class="my-tours__categories">
-            <li class="my-tours__category my-tours__category_active">Предстоящие</li>
-            <li class="my-tours__category">Зарезервированные</li>
-            <li class="my-tours__category">Избранное</li>
-            <li class="my-tours__category">Завершенные</li>
+            <li class="my-tours__category my-tours__category_active" data-category="pre">Предстоящие</li>
+            <li class="my-tours__category" data-category="rezerved">Зарезервированные</li>
+            <li class="my-tours__category" data-category="favorite">Избранное</li>
+            <li class="my-tours__category" data-category="end">Завершенные</li>
           </ul>
           <ul class="my-tours__list">
             <!-- предстоящие -->
-            <li class="tour-card">
+            <li class="tour-card" data-category="pre">
               <a href="#">
                 <div class="tour-card__img-wrapper">
                   <img src="/static/images/tour-1.jpg" alt="tour-1" class="tour-card__img" width="400" height="220">
@@ -97,7 +97,7 @@
               </a>
             </li>
             <!-- Зарезервированные -->
-            <li class="tour-card">
+            <li class="tour-card hidden" data-category="rezerved">
               <a href="#">
                 <div class="tour-card__img-wrapper">
                   <img src="/static/images/tour-2.jpg" alt="tour-1" class="tour-card__img" width="400" height="220">
@@ -129,16 +129,35 @@
               </a>
             </li>
             <!-- Избранное -->
-            @@include('tourCard/index.html', {
-            "imgURL" : "/static/images/tour-3.jpg",
-            "days": "7 дней",
-            "data": "20.10.2022",
-            "title": "Горные приключения",
-            "text": "Отдых с прогулками вдоль высокогорных заповедных озер, а также на водопад Куйгук.",
-            "favoriteClass": "favorite_active"
-            })
+            <li class="tour-card hidden" data-category="favorite">
+              <a href="#">
+                <div class="tour-card__img-wrapper">
+                  <img src="/static/images/tour-3.jpg" alt="tour-3" class="tour-card__img" width="400" height="220">
+                  <div class="tour-card__time">
+                    <span>7 дней</span>
+                    <span>20.10.2022</span>
+                  </div>
+                  @@include('ui/favoriteIcon/index.html', {
+                  "classes" : "favorite_active"
+                  })
+                </div>
+                <div class="tour-card__info">
+                  <h3 class="tour-card__info-title">Горные приключения</h3>
+                  <ul class="tour-card__hashtags">
+                    <li class="tour-card__hashtag"># преодолеть себя</li>
+                    <li class="tour-card__hashtag"># хочу экстрим</li>
+                  </ul>
+                  <p class="tour-card__text">Отдых с прогулками вдоль высокогорных заповедных озер, а также на водопад
+                    Куйгук.</p>
+                </div>
+                <div class="tour-card__buttons">
+                  <button class="button button_grd"><span class="button-txt">Задать вопрос</span></button>
+                  <button class="tour-card__description">Описание тура</button>
+                </div>
+              </a>
+            </li>
             <!-- Завершенные -->
-            <li class="tour-card">
+            <li class="tour-card hidden" data-category="end">
               <a href="#">
                 <div class="tour-card__img-wrapper">
                   <img src="/static/images/tour-4.jpg" alt="tour-1" class="tour-card__img" width="400" height="220">
@@ -183,11 +202,38 @@
         </ul>
         <div class="my-products content-js hidden" data-category="products">
           <ul class="my-products__categories">
-            <li class="my-products__category">Избранное</li>
-            <li class="my-products__category my-products__category_active">Мои заказы</li>
+            <li class="my-products__category my-products__category_active" data-category="productFavorite">Избранное</li>
+            <li class="my-products__category" data-category="orders">Мои заказы</li>
+          </ul>
+          <!-- Избранное  -->
+          <ul class="my-products__favorites" data-category="productFavorite">
+            @@include('productCard/index.html', {
+            "imgURL" : "/static/images/product-1.jpg",
+            "title" : "Рюкзак походный, большой, синий",
+            "amount": "3 000 руб.",
+            "classes": "my-products__item"
+            })
+            @@include('productCard/index.html', {
+            "imgURL" : "/static/images/product-2.jpg",
+            "title" : "Рюкзак походный, большой, синий",
+            "amount": "3 000 руб.",
+            "classes": "my-products__item"
+            })
+            @@include('productCard/index.html', {
+            "imgURL" : "/static/images/product-3.jpg",
+            "title" : "Рюкзак походный, большой, синий",
+            "amount": "3 000 руб.",
+            "classes": "my-products__item"
+            })
+            @@include('productCard/index.html', {
+            "imgURL" : "/static/images/product-4.jpg",
+            "title" : "Рюкзак походный, большой, синий",
+            "amount": "3 000 руб.",
+            "classes": "my-products__item"
+            })
           </ul>
           <!-- Мои заказы -->
-          <ul class="my-products__orders">
+          <ul class="my-products__orders hidden" data-category="orders">
             @@include('order/index.html', {
             "imgURL" : "/static/images/product-1.jpg",
             "title" : "Рюкзак походный, большой, синий",
@@ -234,33 +280,6 @@
             "color": "blue"
             })
           </ul>
-          <!-- Избранное  -->
-          <!-- <ul class="my-products__favorites">
-            @@include('productCard/index.html', {
-            "imgURL" : "/static/images/product-1.jpg",
-            "title" : "Рюкзак походный, большой, синий",
-            "amount": "3 000 руб.",
-            "classes": "my-products__item"
-            })
-            @@include('productCard/index.html', {
-            "imgURL" : "/static/images/product-2.jpg",
-            "title" : "Рюкзак походный, большой, синий",
-            "amount": "3 000 руб.",
-            "classes": "my-products__item"
-            })
-            @@include('productCard/index.html', {
-            "imgURL" : "/static/images/product-3.jpg",
-            "title" : "Рюкзак походный, большой, синий",
-            "amount": "3 000 руб.",
-            "classes": "my-products__item"
-            })
-            @@include('productCard/index.html', {
-            "imgURL" : "/static/images/product-4.jpg",
-            "title" : "Рюкзак походный, большой, синий",
-            "amount": "3 000 руб.",
-            "classes": "my-products__item"
-            })
-          </ul> -->
         </div>
         <div class="bonus content-js hidden" data-category="bonus">
           <div class="bonus__header">

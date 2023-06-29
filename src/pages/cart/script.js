@@ -1,17 +1,3 @@
-const hotSwiper = new Swiper('.hot-swiper', {
-  slidesPerView: 1,
-  spaceBetween: 16,
-  breakpoints: {
-    768: {
-      slidesPerView: 'auto',
-    }
-  },
-  navigation: {
-    nextEl: '.hot-swiper-button-next',
-    prevEl: '.hot-swiper-button-prev',
-  },
-});
-
 //mobile-menu
 const burger = document.querySelector(".header__burger");
 const body = document.querySelector("body");
@@ -49,12 +35,29 @@ popupClose.addEventListener("click", () => {
   body.classList.remove("no-scroll")
 })
 
-//accordion
+let products = document.querySelectorAll(".cart__item");
+products.forEach(product => {
+  let minusButton = product.querySelector(".cart__item-minus");
+  let plusButton = product.querySelector(".cart__item-plus");
 
-let faqAccordion = document.querySelector(".program__faq");
-faqAccordion.addEventListener("click", (event) => {
-  let target = event.target;
-  let item = target.closest('.accordion__item');
-  if (!item) return;
-  item.classList.toggle("accordion__item_active");
+  minusButton.addEventListener("click", () => {
+    let amount = product.querySelector(".cart__item-number");
+    let value = amount.innerHTML;
+    value = value - 1;
+    amount.innerHTML = value;
+    if (value === 1) {
+      minusButton.setAttribute("disabled", "disabled")
+    }
+  })
+
+  plusButton.addEventListener("click", () => {
+    let amount = product.querySelector(".cart__item-number");
+    let value = amount.innerHTML;
+
+    if (value === "1") {
+      minusButton.removeAttribute("disabled", "disabled")
+    }
+    value = +value + 1;
+    amount.innerHTML = value;
+  })
 })

@@ -1,17 +1,3 @@
-const hotSwiper = new Swiper('.hot-swiper', {
-  slidesPerView: 1,
-  spaceBetween: 16,
-  breakpoints: {
-    768: {
-      slidesPerView: 'auto',
-    }
-  },
-  navigation: {
-    nextEl: '.hot-swiper-button-next',
-    prevEl: '.hot-swiper-button-prev',
-  },
-});
-
 //mobile-menu
 const burger = document.querySelector(".header__burger");
 const body = document.querySelector("body");
@@ -49,12 +35,14 @@ popupClose.addEventListener("click", () => {
   body.classList.remove("no-scroll")
 })
 
-//accordion
+//nav
 
-let faqAccordion = document.querySelector(".program__faq");
-faqAccordion.addEventListener("click", (event) => {
+let navigation = document.querySelector('.webpage-navigation')
+
+navigation.addEventListener("click", (event) => {
   let target = event.target;
-  let item = target.closest('.accordion__item');
-  if (!item) return;
-  item.classList.toggle("accordion__item_active");
+  if (target.classList.contains('webpage-navigation__item') && !target.classList.contains('webpage-navigation__item_active')) {
+    document.querySelector(".webpage-navigation__item_active").classList.remove("webpage-navigation__item_active");
+    target.classList.add("webpage-navigation__item_active");
+  }
 })
